@@ -18,7 +18,7 @@ Instead of passive video watching or disconnected flashcards, the app provides a
 3. **Phonics & Pronunciation:** Every word and letter provides crystal-clear audio pronunciation with localized phonics (both English Phonics and authentic Urdu Huruf pronunciation).
 4. **Gamified Retention:** Each unit contains embedded mini-games (Finger Tracing, Drag-and-Drop Matching, Listen-and-Pop Phonics quizzes) and rewards the learner with stars in "Barka's Sticker Album".
 5. **Zero-Latency Offline-First:** 100% functional without an active internet connection, designed for high responsiveness on budget Android tablets and smartphones.
-6. **100% Free & Open Educational Gift:** Completely free forever. Zero paywalls, zero subscriptions, zero ads, and zero locked features. Every child has equal access to quality early learning.
+6. **Developer Zero-Cost Guarantee ($0 Out-of-Pocket):** Built entirely with 100% free, open-source technologies, local-first offline execution, and royalty-free community assets. Requires $0 in recurring server bills or infrastructure subscriptions for the creator, while keeping scalable earning avenues open.
 
 ---
 
@@ -282,10 +282,29 @@ Each curriculum book is governed by a declarative JSON contract. This completely
 2. **Performance:** 
    * Consistent 60 fps rendering on Android devices with 2GB RAM.
    * Cold startup time $< 2.5$ seconds.
-3. **100% Free & Child-Safe Philosophy:**
-   * **Zero In-App Purchases (IAP):** No paywalls or subscriptions. All lessons, books, and sticker rewards are earned purely through learning progression.
-   * **Zero Advertisements:** 100% Ad-free. No commercial banners, popups, or video ads that distract toddlers or risk inappropriate exposure (fully COPPA compliant).
-   * **Zero Operational/Server Costs:** Because all content, manifests, and progress tracking run locally on the device (offline-first), maintaining and distributing the app costs \$0 in cloud hosting fees.
-   * **Zero Distractions:** No external web links without an intentional parental math-lock gate.
+3. **Developer Zero-Cost Architecture ($0 Out-of-Pocket):**
+   * **$0 Server/Cloud Bills:** All book manifests, animations, phonics audio, and user progress run locally on the device (offline-first). Hosting and running the app costs $0 in monthly recurring fees.
+   * **100% Free Tooling & Assets:** Built using Flutter (free/open-source), Google Noto Nastaliq Urdu (OFL open license), and CC0/open-source audio & illustrations.
+   * **Child Safety (COPPA & Google Play Families Compliant):** No deceptive ads, no third-party tracking, and parental gate protection for any settings or external actions.
 4. **Offline Capability:**
    * Works completely offline with zero internet access once installed.
+
+---
+
+## 8. Monetization & Earning Architecture ($0 Developer Spend, High Earning Potential)
+
+The architecture is intentionally designed so that the developer spends **$0 to build and operate**, while leaving multiple flexible monetization channels available:
+
+### 8.1. Google AdMob for Families (Rewarded Video Model)
+* **Kid-Safe Rewarded Ads:** Compliant with Google Play's *Families Self-Certified Ads SDK Program*.
+* **Implementation:** Never interrupt active learning with intrusive banners or popups. Instead, place an optional rewarded video prompt inside "Barka's Sticker Album" or the lesson completion screen:
+  * Example: *"Watch a short video to unlock a special golden star sticker!"*
+  * Gives players a voluntary reason to engage, resulting in significantly higher eCPMs ($10–$25+ in tier-1 markets, reliable passive earnings in regional markets) without degrading the educational experience.
+
+### 8.2. Modular Expansion (Optional Future In-App Purchases)
+* **Core Nursery Syllabus:** 100% free for Barka Faral and public users to maximize downloads and viral adoption.
+* **Premium Curriculum Packs:** When expanding to higher grades (Kindergarten/Prep, Grade 1 to 5) or specialized private school boards (e.g. Oxford series), offer them as optional one-time unlocks or low-cost bundle packs.
+
+### 8.3. B2B School & Institutional White-Labeling
+* Private school chains (e.g. Allied Schools, The Educators, Dar-e-Arqam) can be offered customized branded editions featuring their exact textbooks, logos, and custom voiceovers.
+
