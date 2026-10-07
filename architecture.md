@@ -263,13 +263,36 @@ Each curriculum book is governed by a declarative JSON contract. This completely
 
 ---
 
-## 6. Educational Scope (Nursery / Playgroup Phase 1)
+## 6. Multi-Grade Scaling Roadmap & Grade-Adaptive Engine
 
-| Subject | Scope / Key Competencies | Interactive Assets |
-| :--- | :--- | :--- |
-| **English** | Alphabet ($A$ to $Z$), Letter recognition (Capital & Small), Phonic sounds (/æ/, /b/, /k/...), 52 Core Nursery vocabulary words. | 26 Living Book pages + 26 Tracing challenges + Matching games. |
-| **Urdu (اردو)** | Huruf-e-Tahajji (ا تا ے), Phonetic pronunciation, Primary Qayda vocabulary (انار، بلی، پنکھا، تتلی، ٹماٹر...), Letter tracing. | 37 Living Book pages + 37 Nastaliq tracing paths + Balloon pop quizzes. |
-| **Maths (ریاضی)** | Numbers $1$ to $10$, Object counting playground, Basic Shapes (Circle, Square, Triangle, Star), Primary Colors. | 10 Counting pages + Shape sorter + Interactive fruit basket counter. |
+The core engine is grade-agnostic and designed to scale as Barka Faral grows, seamlessly supporting higher classes (Kindergarten through Primary Grade 5) for both private schools and government Single National Curriculum (SNC):
+
+### 6.1. Multi-Grade Progression Roadmap
+
+| Grade / Class | Target Age | English Focus | Urdu Focus (قاعدہ و کتاب) | Maths Focus | General Knowledge / Science |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Playgroup / Nursery (Phase 1)** | Ages 3–4 | Alphabet ($A–Z$), Phonics (/æ/, /b/), 52 Core Words, Tracing. | Huruf-e-Tahajji (ا تا ے), Phonics, First Qayda Words, Nastaliq tracing. | Numbers $1–10$, Shapes, Colors, Interactive Object Counter. | Basic Animals, Fruits, Vegetables. |
+| **Kindergarten / Prep (Phase 2)** | Ages 4–5 | 2-3 letter word blending (CVC words: cat, dog), Sight words, Rhymes. | Huruf joint forms (جوڑ توڑ / آدھی اشکال), 2-letter Urdu words, Harakaat (زبر، زیر، پیش). | Numbers $1–50$, Number writing, Simple Addition with visual objects. | My Body, Seasons, Cleanliness. |
+| **Grade 1 (Phase 3)** | Ages 5–6 | Short sentence reading, Phonics digraphs (ch, sh, th), Vocabulary stories. | Simple sentence reading (یہ ایک بلی ہے), Word opposites (الفاظ متضاد), Basic grammar. | Numbers up to $100$, Addition & Subtraction with carrying/borrowing, Clock time. | Waqfiyat-e-Aama (General Knowledge): Living/Non-living things, Plants. |
+| **Grade 2 & 3 (Phase 4)** | Ages 6–8 | Reading comprehension, Nouns, Verbs, Paragraph writing, Rhymes. | Kahaniyan (کہانیاں), Urdu grammar (اسم، فعل), Wahid-Juma (واحد جمع), Mozakar-Monas. | Multiplication tables ($1–10$), Division basics, Fractions, Shapes & Geometry. | General Science (Human body systems, Solar system, Water cycle, Weather). |
+| **Grade 4 & 5 (Phase 5)** | Ages 8–10 | Grammar rules, Tenses, Comprehension questions, Essay writing. | Insha-Pardazi (انشاء پردازی), Khutoot (خطوط), Urdu literature, Poetry explanation. | Multi-digit arithmetic, Decimals, Percentages, Perimeter & Area, Word problems. | General Science (Forces, Energy, Ecosystems, Microorganisms) + Social Studies. |
+
+---
+
+### 6.2. Grade-Adaptive UI Architecture
+To prevent the app from feeling "too babyish" for older kids or "too complex" for toddlers, the UI dynamically morphs based on the selected class:
+1. **Early Childhood Mode (Nursery / Prep):**
+   * Voiceover-first navigation (every prompt is spoken aloud).
+   * Massive touch targets ($>64$ dp).
+   * Tracing canvases, balloon popping, and animated cartoon rewards.
+2. **Lower Primary Mode (Grades 1 & 2):**
+   * Karaoke-style text highlighting during voice narration.
+   * Drag-and-drop word builders and interactive exercise worksheets.
+   * Star-based lesson mastery scores.
+3. **Upper Primary Mode (Grades 3 to 5):**
+   * Clean, textbook layout with interactive diagrams (e.g. tap a flower/heart diagram to reveal and test organ labels).
+   * Multiple-choice quizzes (MCQs), fill-in-the-blanks, and step-by-step math problem solvers.
+   * Subject notes & chapter summary cards for exam preparation.
 
 ---
 
