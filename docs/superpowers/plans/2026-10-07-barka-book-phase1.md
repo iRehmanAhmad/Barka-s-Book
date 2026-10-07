@@ -217,13 +217,13 @@
   - `ProgressRepository`: Offline persistence of completed pages, earned stars, and unlocked stickers.
   - `StickerAlbumScreen`: Barka's interactive Toy Box displaying collected badges and reward stickers.
 
-- [ ] **Step 1: Write unit test for ProgressRepository**
+- [x] **Step 1: Write unit test for ProgressRepository**
   Verify saving/loading stars, marking lessons complete, and unlocking stickers offline.
-- [ ] **Step 2: Run test to confirm failure**
-- [ ] **Step 3: Implement ProgressRepository with Hive storage**
-- [ ] **Step 4: Implement StickerAlbumScreen with interactive wiggle stickers**
-- [ ] **Step 5: Run tests and verify passing**
-- [ ] **Step 6: Commit reward system and local storage**
+- [x] **Step 2: Run test to confirm failure**
+- [x] **Step 3: Implement ProgressRepository with Hive storage**
+- [x] **Step 4: Implement StickerAlbumScreen with interactive wiggle stickers**
+- [x] **Step 5: Run tests and verify passing**
+- [x] **Step 6: Commit reward system and local storage**
   `git commit -m "feat: implement offline progress repository and Barka's sticker album"`
 
 ---
