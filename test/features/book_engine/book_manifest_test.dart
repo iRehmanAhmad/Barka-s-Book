@@ -15,7 +15,7 @@ class MockAssetBundle extends CachingAssetBundle {
     if (assets.containsKey(key)) {
       return assets[key]!;
     }
-    throw FlutterError('Unable to load asset: $key');
+    throw Exception('Unable to load asset: $key');
   }
 
   @override
