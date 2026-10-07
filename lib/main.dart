@@ -14,7 +14,7 @@ void main() {
     DeviceOrientation.landscapeRight,
   ]);
 
-  final audioController = AudioController();
+  final audioController = AudioController.live();
   final bookRepository = BookRepository();
   final progressRepository = ProgressRepository();
 

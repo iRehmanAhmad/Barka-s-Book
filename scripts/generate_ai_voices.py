@@ -89,21 +89,35 @@ AUDIO_ENTRIES = [
     {"text": "One Shining Sun!", "voice": VOICE_ENGLISH, "output": "assets/audio/maths/one_sun.ogg"},
     {"text": "Two Flying Birds!", "voice": VOICE_ENGLISH, "output": "assets/audio/maths/two_birds.ogg"},
     {"text": "Three Red Apples!", "voice": VOICE_ENGLISH, "output": "assets/audio/maths/three_apples.ogg"},
+
+    # Sound Effects (SFX)
+    {"text": "Pop!", "voice": VOICE_ENGLISH, "output": "assets/audio/sfx/pop_chime.ogg"},
+    {"text": "Yay! Super! Great job!", "voice": VOICE_ENGLISH, "output": "assets/audio/sfx/cheer.ogg"},
+    {"text": "Hooray! Bravo! Wonderful!", "voice": VOICE_ENGLISH, "output": "assets/audio/sfx/applause.ogg"},
+    {"text": "Boing! Bounce!", "voice": VOICE_ENGLISH, "output": "assets/audio/sfx/boing.ogg"},
+    {"text": "Next page! Let us go!", "voice": VOICE_ENGLISH, "output": "assets/audio/sfx/page_flip.ogg"},
+    {"text": "Twinkle star! Sparkle!", "voice": VOICE_ENGLISH, "output": "assets/audio/sfx/star_chime.ogg"},
+    {"text": "Crunch, crunch! Yummy!", "voice": VOICE_ENGLISH, "output": "assets/audio/sfx/apple_crunch.ogg"},
+    {"text": "Meow! Sweet kitty!", "voice": VOICE_ENGLISH, "output": "assets/audio/sfx/cat_meow.ogg"},
+    {"text": "Whoosh! Zoom!", "voice": VOICE_ENGLISH, "output": "assets/audio/sfx/whoosh.ogg"},
 ]
 
 
 async def generate_audio():
-    print(f"🎙️ Generating {len(AUDIO_ENTRIES)} AI voice files for Barka's Book...")
+    import shutil
+    print(f"🎙️ Generating {len(AUDIO_ENTRIES)} AI voice & SFX files for Barka's Book...")
 
     for item in AUDIO_ENTRIES:
-        out_path = item["output"]
-        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        out_ogg = item["output"]
+        out_mp3 = out_ogg.rsplit(".", 1)[0] + ".mp3"
+        os.makedirs(os.path.dirname(out_ogg), exist_ok=True)
 
-        print(f"🔊 Generating: [{item['voice']}] '{item['text']}' -> {out_path}")
+        print(f"🔊 Generating: [{item['voice']}] '{item['text']}' -> {out_mp3} & {out_ogg}")
         communicate = edge_tts.Communicate(item["text"], item["voice"])
-        await communicate.save(out_path)
+        await communicate.save(out_mp3)
+        shutil.copyfile(out_mp3, out_ogg)
 
-    print("\n✨ All AI voice files generated successfully in assets/audio/!")
+    print("\n✨ All AI voice and SFX files generated successfully in assets/audio/ (both .mp3 and .ogg)!")
 
 
 if __name__ == "__main__":

@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
 
 abstract class AudioPlayerClient {
@@ -13,6 +14,48 @@ class NoOpAudioPlayerClient implements AudioPlayerClient {
   Future<void> stop() async {}
 }
 
+class FlutterAudioPlayerClient implements AudioPlayerClient {
+  final AudioPlayer _player;
+
+  FlutterAudioPlayerClient({AudioPlayer? player}) : _player = player ?? AudioPlayer();
+
+  @override
+  Future<void> playAsset(String assetPath, {double volume = 1.0}) async {
+    try {
+      var cleanPath = assetPath.startsWith('assets/')
+          ? assetPath.substring(7)
+          : assetPath;
+      await _player.stop();
+      await _player.setVolume(volume);
+      try {
+        await _player.play(AssetSource(cleanPath));
+      } catch (e) {
+        // Fallback: if .ogg failed, try .mp3; if .mp3 failed, try .ogg
+        if (cleanPath.endsWith('.ogg')) {
+          final mp3Path = cleanPath.replaceAll(RegExp(r'\.ogg$'), '.mp3');
+          await _player.play(AssetSource(mp3Path));
+        } else if (cleanPath.endsWith('.mp3')) {
+          final oggPath = cleanPath.replaceAll(RegExp(r'\.mp3$'), '.ogg');
+          await _player.play(AssetSource(oggPath));
+        } else {
+          rethrow;
+        }
+      }
+    } catch (e) {
+      debugPrint('FlutterAudioPlayerClient error playing $assetPath: $e');
+    }
+  }
+
+  @override
+  Future<void> stop() async {
+    try {
+      await _player.stop();
+    } catch (e) {
+      debugPrint('FlutterAudioPlayerClient error stopping: $e');
+    }
+  }
+}
+
 class AudioController extends ChangeNotifier {
   final AudioPlayerClient _sfxClient;
   final AudioPlayerClient _voiceClient;
@@ -20,6 +63,15 @@ class AudioController extends ChangeNotifier {
 
   bool _isMuted = false;
   bool _isBgmEnabled = true;
+
+  /// Production factory that initializes real hardware audio players
+  factory AudioController.live() {
+    return AudioController(
+      sfxClient: FlutterAudioPlayerClient(),
+      voiceClient: FlutterAudioPlayerClient(),
+      bgmClient: FlutterAudioPlayerClient(),
+    );
+  }
 
   AudioController({
     AudioPlayerClient? sfxClient,
