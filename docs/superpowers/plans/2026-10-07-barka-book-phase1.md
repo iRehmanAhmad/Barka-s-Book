@@ -164,15 +164,15 @@
 - Consumes: `MiniGameConfig` with guide points.
 - Produces: Interactive canvas where a child traces letters/Huruf/numbers, displays particle glitter trails, and detects completion ($>80\%$).
 
-- [ ] **Step 1: Write unit test for TracingDetector**
+- [x] **Step 1: Write unit test for TracingDetector**
   Verify proximity calculation against ordered checkpoints and completion percentage trigger.
-- [ ] **Step 2: Run test to confirm failure**
-- [ ] **Step 3: Implement TracingDetector checkpoint algorithm**
-- [ ] **Step 4: Implement TracingCanvas CustomPainter**
+- [x] **Step 2: Run test to confirm failure**
+- [x] **Step 3: Implement TracingDetector checkpoint algorithm**
+- [x] **Step 4: Implement TracingCanvas CustomPainter**
   Draw guide paths, touched points, and celebratory star particles.
-- [ ] **Step 5: Implement TracingScreen with celebration fanfare**
-- [ ] **Step 6: Run tests and verify passing**
-- [ ] **Step 7: Commit tracing mini-game**
+- [x] **Step 5: Implement TracingScreen with celebration fanfare**
+- [x] **Step 6: Run tests and verify passing**
+- [x] **Step 7: Commit tracing mini-game**
   `git commit -m "feat: implement finger tracing mini-game with stroke detection and sparkle effects"`
 
 ---
