@@ -1,0 +1,121 @@
+{
+  "bookId": "barka_nursery_urdu",
+  "title": "بارکہ کا اردو قاعدہ",
+  "subject": "urdu",
+  "grade": "nursery",
+  "isRtl": true,
+  "pages": [
+    {
+      "pageNumber": 1,
+      "letter": "ا",
+      "phonicsSound": "audio/urdu/phonics/alif.ogg",
+      "phonicsDescription": "الف",
+      "mainIllustration": {
+        "assetPath": "assets/animations/pomegranate.json",
+        "fallbackImage": "assets/images/anaar.png",
+        "type": "lottie",
+        "interactiveSfx": "audio/sfx/pop_chime.ogg",
+        "motionTrigger": "tap_squish_and_grow"
+      },
+      "vocabularyWords": [
+        {
+          "word": "انار",
+          "audio": "audio/urdu/words/anaar.ogg",
+          "color": "#E91E63"
+        },
+        {
+          "word": "انگور",
+          "audio": "audio/urdu/words/angoor.ogg",
+          "color": "#4CAF50"
+        },
+        {
+          "word": "اونٹ",
+          "audio": "audio/urdu/words/oont.ogg",
+          "color": "#795548"
+        }
+      ],
+      "miniGame": {
+        "type": "tracing",
+        "targetSymbol": "ا",
+        "guidePoints": [
+          {"x": 0.5, "y": 0.15},
+          {"x": 0.5, "y": 0.85}
+        ]
+      }
+    },
+    {
+      "pageNumber": 2,
+      "letter": "ب",
+      "phonicsSound": "audio/urdu/phonics/bay.ogg",
+      "phonicsDescription": "بے",
+      "mainIllustration": {
+        "assetPath": "assets/animations/cat.json",
+        "fallbackImage": "assets/images/billi.png",
+        "type": "lottie",
+        "interactiveSfx": "audio/sfx/cat_meow.ogg",
+        "motionTrigger": "tap_wobble_and_bounce"
+      },
+      "vocabularyWords": [
+        {
+          "word": "بلی",
+          "audio": "audio/urdu/words/billi.ogg",
+          "color": "#FF9800"
+        },
+        {
+          "word": "بطخ",
+          "audio": "audio/urdu/words/batakh.ogg",
+          "color": "#00BCD4"
+        },
+        {
+          "word": "بستہ",
+          "audio": "audio/urdu/words/basta.ogg",
+          "color": "#9C27B0"
+        }
+      ],
+      "miniGame": {
+        "type": "balloon_pop",
+        "targetSound": "audio/urdu/phonics/bay.ogg",
+        "correctSymbol": "ب",
+        "distractorSymbols": ["ا", "ت", "پ"]
+      }
+    },
+    {
+      "pageNumber": 3,
+      "letter": "پ",
+      "phonicsSound": "audio/urdu/phonics/pay.ogg",
+      "phonicsDescription": "پے",
+      "mainIllustration": {
+        "assetPath": "assets/animations/fan.json",
+        "fallbackImage": "assets/images/pankha.png",
+        "type": "lottie",
+        "interactiveSfx": "audio/sfx/whoosh.ogg",
+        "motionTrigger": "tap_rotate"
+      },
+      "vocabularyWords": [
+        {
+          "word": "پنکھا",
+          "audio": "audio/urdu/words/pankha.ogg",
+          "color": "#2196F3"
+        },
+        {
+          "word": "پتنگ",
+          "audio": "audio/urdu/words/patang.ogg",
+          "color": "#E91E63"
+        },
+        {
+          "word": "پودا",
+          "audio": "audio/urdu/words/pauda.ogg",
+          "color": "#4CAF50"
+        }
+      ],
+      "miniGame": {
+        "type": "matching",
+        "pairs": [
+          {"symbol": "ا", "target": "انار"},
+          {"symbol": "ب", "target": "بلی"},
+          {"symbol": "پ", "target": "پنکھا"}
+        ]
+      }
+    }
+  ]
+}

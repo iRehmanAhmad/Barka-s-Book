@@ -1,0 +1,95 @@
+{
+  "bookId": "barka_nursery_maths",
+  "title": "Barka's Fun with Numbers & Shapes",
+  "subject": "maths",
+  "grade": "nursery",
+  "isRtl": false,
+  "pages": [
+    {
+      "pageNumber": 1,
+      "number": 1,
+      "numberWord": "One",
+      "urduNumberWord": "ایک",
+      "phonicsSound": "audio/maths/one.ogg",
+      "mainIllustration": {
+        "assetPath": "assets/animations/sun.json",
+        "fallbackImage": "assets/images/one_sun.png",
+        "type": "lottie",
+        "interactiveSfx": "audio/sfx/star_chime.ogg",
+        "motionTrigger": "tap_rotate"
+      },
+      "countingItems": [
+        {
+          "name": "One Shining Sun",
+          "count": 1,
+          "audio": "audio/maths/one_sun.ogg"
+        }
+      ],
+      "miniGame": {
+        "type": "tracing",
+        "targetSymbol": "1",
+        "guidePoints": [
+          {"x": 0.45, "y": 0.25},
+          {"x": 0.5, "y": 0.2},
+          {"x": 0.5, "y": 0.85}
+        ]
+      }
+    },
+    {
+      "pageNumber": 2,
+      "number": 2,
+      "numberWord": "Two",
+      "urduNumberWord": "دو",
+      "phonicsSound": "audio/maths/two.ogg",
+      "mainIllustration": {
+        "assetPath": "assets/animations/birds.json",
+        "fallbackImage": "assets/images/two_birds.png",
+        "type": "lottie",
+        "interactiveSfx": "audio/sfx/bird_chirp.ogg",
+        "motionTrigger": "tap_squish_and_grow"
+      },
+      "countingItems": [
+        {
+          "name": "Two Flying Birds",
+          "count": 2,
+          "audio": "audio/maths/two_birds.ogg"
+        }
+      ],
+      "miniGame": {
+        "type": "balloon_pop",
+        "targetSound": "audio/maths/two.ogg",
+        "correctSymbol": "2",
+        "distractorSymbols": ["1", "3", "4"]
+      }
+    },
+    {
+      "pageNumber": 3,
+      "number": 3,
+      "numberWord": "Three",
+      "urduNumberWord": "تین",
+      "phonicsSound": "audio/maths/three.ogg",
+      "mainIllustration": {
+        "assetPath": "assets/animations/apples.json",
+        "fallbackImage": "assets/images/three_apples.png",
+        "type": "lottie",
+        "interactiveSfx": "audio/sfx/apple_crunch.ogg",
+        "motionTrigger": "tap_wobble_and_bounce"
+      },
+      "countingItems": [
+        {
+          "name": "Three Red Apples",
+          "count": 3,
+          "audio": "audio/maths/three_apples.ogg"
+        }
+      ],
+      "miniGame": {
+        "type": "matching",
+        "pairs": [
+          {"symbol": "1", "target": "One Sun"},
+          {"symbol": "2", "target": "Two Birds"},
+          {"symbol": "3", "target": "Three Apples"}
+        ]
+      }
+    }
+  ]
+}

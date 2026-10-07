@@ -1,0 +1,125 @@
+{
+  "bookId": "barka_nursery_english",
+  "title": "Barka's English Phonics & Words",
+  "subject": "english",
+  "grade": "nursery",
+  "isRtl": false,
+  "pages": [
+    {
+      "pageNumber": 1,
+      "letter": "A",
+      "phonicsSound": "audio/english/phonics/a.ogg",
+      "phonicsDescription": "/æ/ as in Apple",
+      "mainIllustration": {
+        "assetPath": "assets/animations/apple.json",
+        "fallbackImage": "assets/images/apple.png",
+        "type": "lottie",
+        "interactiveSfx": "audio/sfx/apple_crunch.ogg",
+        "motionTrigger": "tap_wobble_and_bounce"
+      },
+      "vocabularyWords": [
+        {
+          "word": "Apple",
+          "audio": "audio/english/words/apple.ogg",
+          "color": "#FF4B4B"
+        },
+        {
+          "word": "Ant",
+          "audio": "audio/english/words/ant.ogg",
+          "color": "#795548"
+        },
+        {
+          "word": "Aeroplane",
+          "audio": "audio/english/words/aeroplane.ogg",
+          "color": "#2196F3"
+        }
+      ],
+      "miniGame": {
+        "type": "tracing",
+        "targetSymbol": "A",
+        "guidePoints": [
+          {"x": 0.5, "y": 0.2},
+          {"x": 0.2, "y": 0.8},
+          {"x": 0.5, "y": 0.2},
+          {"x": 0.8, "y": 0.8},
+          {"x": 0.35, "y": 0.55},
+          {"x": 0.65, "y": 0.55}
+        ]
+      }
+    },
+    {
+      "pageNumber": 2,
+      "letter": "B",
+      "phonicsSound": "audio/english/phonics/b.ogg",
+      "phonicsDescription": "/b/ as in Ball",
+      "mainIllustration": {
+        "assetPath": "assets/animations/ball.json",
+        "fallbackImage": "assets/images/ball.png",
+        "type": "lottie",
+        "interactiveSfx": "audio/sfx/boing.ogg",
+        "motionTrigger": "tap_squish_and_grow"
+      },
+      "vocabularyWords": [
+        {
+          "word": "Ball",
+          "audio": "audio/english/words/ball.ogg",
+          "color": "#FF9800"
+        },
+        {
+          "word": "Boy",
+          "audio": "audio/english/words/boy.ogg",
+          "color": "#3F51B5"
+        },
+        {
+          "word": "Butterfly",
+          "audio": "audio/english/words/butterfly.ogg",
+          "color": "#E91E63"
+        }
+      ],
+      "miniGame": {
+        "type": "balloon_pop",
+        "targetSound": "audio/english/phonics/b.ogg",
+        "correctSymbol": "B",
+        "distractorSymbols": ["A", "C", "D"]
+      }
+    },
+    {
+      "pageNumber": 3,
+      "letter": "C",
+      "phonicsSound": "audio/english/phonics/c.ogg",
+      "phonicsDescription": "/k/ as in Cat",
+      "mainIllustration": {
+        "assetPath": "assets/animations/cat.json",
+        "fallbackImage": "assets/images/cat.png",
+        "type": "lottie",
+        "interactiveSfx": "audio/sfx/cat_meow.ogg",
+        "motionTrigger": "tap_wobble_and_bounce"
+      },
+      "vocabularyWords": [
+        {
+          "word": "Cat",
+          "audio": "audio/english/words/cat.ogg",
+          "color": "#FFC107"
+        },
+        {
+          "word": "Car",
+          "audio": "audio/english/words/car.ogg",
+          "color": "#F44336"
+        },
+        {
+          "word": "Cup",
+          "audio": "audio/english/words/cup.ogg",
+          "color": "#009688"
+        }
+      ],
+      "miniGame": {
+        "type": "matching",
+        "pairs": [
+          {"symbol": "A", "target": "Apple"},
+          {"symbol": "B", "target": "Ball"},
+          {"symbol": "C", "target": "Cat"}
+        ]
+      }
+    }
+  ]
+}
