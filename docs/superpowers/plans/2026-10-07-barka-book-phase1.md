@@ -113,13 +113,13 @@
   - `AppTextStyles` configured with Noto Nastaliq Urdu for Urdu script and Quicksand for English/Maths.
   - `BouncyButton`: Kid-friendly touch button with shrink-on-press and sound feedback.
 
-- [ ] **Step 1: Write widget test for BouncyButton**
+- [x] **Step 1: Write widget test for BouncyButton**
   Verify animation scale trigger on tap-down, tap-up, and callback execution.
-- [ ] **Step 2: Run test to confirm failure**
-- [ ] **Step 3: Implement AppColors and AppTextStyles**
-- [ ] **Step 4: Implement BouncyButton using AnimatedScale and AudioController integration**
-- [ ] **Step 5: Run tests and verify passing**
-- [ ] **Step 6: Commit design system components**
+- [x] **Step 2: Run test to confirm failure**
+- [x] **Step 3: Implement AppColors and AppTextStyles**
+- [x] **Step 4: Implement BouncyButton using AnimatedScale and AudioController integration**
+- [x] **Step 5: Run tests and verify passing**
+- [x] **Step 6: Commit design system components**
   `git commit -m "feat: implement kid-friendly design system, typography and bouncy button"`
 
 ---
