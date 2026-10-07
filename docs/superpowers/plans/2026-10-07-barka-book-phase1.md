@@ -192,14 +192,14 @@
   - `MatchingGameScreen`: Drag-and-drop letter-to-picture activity.
   - `BalloonPopScreen`: Audio-prompted balloon pop phonics game.
 
-- [ ] **Step 1: Write widget test for MatchingGameScreen**
+- [x] **Step 1: Write widget test for MatchingGameScreen**
   Test dragging item to correct target, trigger success sound and score update.
-- [ ] **Step 2: Write widget test for BalloonPopScreen**
+- [x] **Step 2: Write widget test for BalloonPopScreen**
   Test tapping correct balloon, pop animation, and score increment.
-- [ ] **Step 3: Implement MatchingGameScreen using Draggable and DragTarget**
-- [ ] **Step 4: Implement BalloonPopScreen with animated floating balloons**
-- [ ] **Step 5: Run tests and ensure all pass**
-- [ ] **Step 6: Commit matching and balloon pop games**
+- [x] **Step 3: Implement MatchingGameScreen using Draggable and DragTarget**
+- [x] **Step 4: Implement BalloonPopScreen with animated floating balloons**
+- [x] **Step 5: Run tests and ensure all pass**
+- [x] **Step 6: Commit matching and balloon pop games**
   `git commit -m "feat: implement drag-and-match and balloon pop phonics mini-games"`
 
 ---
