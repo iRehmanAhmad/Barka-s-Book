@@ -59,14 +59,14 @@
 - Consumes: JSON files in `assets/books/barka_nursery/*.json`.
 - Produces: `BookManifest BookRepository.loadManifest(String assetPath)` with full type-safe models for pages, audio paths, and mini-games.
 
-- [ ] **Step 1: Write failing unit test for BookManifest parser**
+- [x] **Step 1: Write failing unit test for BookManifest parser**
   Test loading and parsing `english_manifest.json` and `urdu_manifest.json` verifying RTL flag, page count, and mini-game configs.
-- [ ] **Step 2: Run test to confirm failure**
-- [ ] **Step 3: Implement data models with fromJson factories**
+- [x] **Step 2: Run test to confirm failure**
+- [x] **Step 3: Implement data models with fromJson factories**
   Implement `BookManifest`, `BookPage`, `IllustrationHotspot`, `VocabularyWord`, and `MiniGameConfig`.
-- [ ] **Step 4: Implement BookRepository to read rootBundle JSON**
-- [ ] **Step 5: Run tests and ensure all pass**
-- [ ] **Step 6: Commit content parser module**
+- [x] **Step 4: Implement BookRepository to read rootBundle JSON**
+- [x] **Step 5: Run tests and ensure all pass**
+- [x] **Step 6: Commit content parser module**
   `git commit -m "feat: implement book manifest data models and JSON repository"`
 
 ---
@@ -85,15 +85,15 @@
   - `Future<void> AudioController.speakPhonics(String audioPath)`
   - `Future<void> AudioController.stopAll()`
 
-- [ ] **Step 1: Write unit test for AudioController methods and state**
+- [x] **Step 1: Write unit test for AudioController methods and state**
   Mock audio player backend and verify concurrent SFX playback and voiceover channel prioritization.
-- [ ] **Step 2: Run test to confirm failure**
-- [ ] **Step 3: Implement AudioController with AudioPlayer instances**
+- [x] **Step 2: Run test to confirm failure**
+- [x] **Step 3: Implement AudioController with AudioPlayer instances**
   Create dedicated SFX player and voiceover player to prevent sound cutting.
-- [ ] **Step 4: Implement SoundEffects registry with pre-cached audio keys**
+- [x] **Step 4: Implement SoundEffects registry with pre-cached audio keys**
   Define keys: `pop`, `cheer`, `applause`, `ding`, `pageFlip`, `starChime`.
-- [ ] **Step 5: Run tests and verify passing**
-- [ ] **Step 6: Commit audio subsystem**
+- [x] **Step 5: Run tests and verify passing**
+- [x] **Step 6: Commit audio subsystem**
   `git commit -m "feat: add low-latency dual-channel audio controller"`
 
 ---
