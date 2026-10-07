@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import '../../book_engine/data/models/book_manifest.dart';
-import '../../book_engine/data/models/mini_game_config.dart';
-import '../../book_engine/data/repositories/book_repository.dart';
-import '../../book_engine/presentation/screens/book_reader_screen.dart';
-import '../../games/balloon_pop/presentation/screens/balloon_pop_screen.dart';
-import '../../games/matching/presentation/screens/matching_game_screen.dart';
-import '../../games/tracing/presentation/screens/tracing_screen.dart';
-import '../../rewards/presentation/screens/sticker_album_screen.dart';
-import '../../../../core/audio/audio_controller.dart';
-import '../../../../core/audio/sound_effects.dart';
-import '../../../../core/storage/progress_repository.dart';
-import '../../../../core/theme/app_colors.dart';
-import '../../../../core/widgets/bouncy_button.dart';
-import '../widgets/subject_card.dart';
+import 'package:barka_book/features/book_engine/data/models/book_manifest.dart';
+import 'package:barka_book/features/book_engine/data/models/mini_game_config.dart';
+import 'package:barka_book/features/book_engine/data/repositories/book_repository.dart';
+import 'package:barka_book/features/book_engine/presentation/screens/book_reader_screen.dart';
+import 'package:barka_book/features/games/balloon_pop/presentation/screens/balloon_pop_screen.dart';
+import 'package:barka_book/features/games/matching/presentation/screens/matching_game_screen.dart';
+import 'package:barka_book/features/games/tracing/presentation/screens/tracing_screen.dart';
+import 'package:barka_book/features/rewards/presentation/screens/sticker_album_screen.dart';
+import 'package:barka_book/core/audio/audio_controller.dart';
+import 'package:barka_book/core/audio/sound_effects.dart';
+import 'package:barka_book/core/storage/progress_repository.dart';
+import 'package:barka_book/core/theme/app_colors.dart';
+import 'package:barka_book/core/widgets/bouncy_button.dart';
+import 'package:barka_book/features/home/presentation/widgets/subject_card.dart';
 
 class HomeScreen extends StatelessWidget {
   final BookRepository bookRepository;
