@@ -239,11 +239,11 @@
 **Interfaces:**
 - Produces: Main interactive dashboard featuring Barka Faral, subject selector (English, Urdu Qayda, Maths), Sticker Album button, and parental settings gate.
 
-- [ ] **Step 1: Write integration test for HomeScreen navigation**
+- [x] **Step 1: Write integration test for HomeScreen navigation**
   Verify tapping English, Urdu, Maths, or Album launches the respective screens.
-- [ ] **Step 2: Run test to confirm failure**
-- [ ] **Step 3: Implement HomeScreen with animated character illustration and colorful cards**
-- [ ] **Step 4: Connect main.dart to HomeScreen**
-- [ ] **Step 5: Run all unit and widget tests across the entire project**
-- [ ] **Step 6: Commit integration and complete Phase 1 deliverable**
+- [x] **Step 2: Run test to confirm failure**
+- [x] **Step 3: Implement HomeScreen with animated character illustration and colorful cards**
+- [x] **Step 4: Connect main.dart to HomeScreen**
+- [x] **Step 5: Run all unit and widget tests across the entire project**
+- [x] **Step 6: Commit integration and complete Phase 1 deliverable**
   `git commit -m "feat: integrate home dashboard and finalize Phase 1 living book engine"`
