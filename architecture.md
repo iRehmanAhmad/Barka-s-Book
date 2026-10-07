@@ -18,6 +18,7 @@ Instead of passive video watching or disconnected flashcards, the app provides a
 3. **Phonics & Pronunciation:** Every word and letter provides crystal-clear audio pronunciation with localized phonics (both English Phonics and authentic Urdu Huruf pronunciation).
 4. **Gamified Retention:** Each unit contains embedded mini-games (Finger Tracing, Drag-and-Drop Matching, Listen-and-Pop Phonics quizzes) and rewards the learner with stars in "Barka's Sticker Album".
 5. **Zero-Latency Offline-First:** 100% functional without an active internet connection, designed for high responsiveness on budget Android tablets and smartphones.
+6. **100% Free & Open Educational Gift:** Completely free forever. Zero paywalls, zero subscriptions, zero ads, and zero locked features. Every child has equal access to quality early learning.
 
 ---
 
@@ -281,7 +282,10 @@ Each curriculum book is governed by a declarative JSON contract. This completely
 2. **Performance:** 
    * Consistent 60 fps rendering on Android devices with 2GB RAM.
    * Cold startup time $< 2.5$ seconds.
-3. **Safety & Zero Distractions:**
-   * $100\%$ Ad-free, no third-party tracking, no external web links without a parental math-lock gate.
+3. **100% Free & Child-Safe Philosophy:**
+   * **Zero In-App Purchases (IAP):** No paywalls or subscriptions. All lessons, books, and sticker rewards are earned purely through learning progression.
+   * **Zero Advertisements:** 100% Ad-free. No commercial banners, popups, or video ads that distract toddlers or risk inappropriate exposure (fully COPPA compliant).
+   * **Zero Operational/Server Costs:** Because all content, manifests, and progress tracking run locally on the device (offline-first), maintaining and distributing the app costs \$0 in cloud hosting fees.
+   * **Zero Distractions:** No external web links without an intentional parental math-lock gate.
 4. **Offline Capability:**
    * Works completely offline with zero internet access once installed.
