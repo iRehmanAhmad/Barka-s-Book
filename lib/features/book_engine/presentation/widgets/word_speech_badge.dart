@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../data/models/vocabulary_word.dart';
-import '../../../../core/widgets/bouncy_button.dart';
+import 'package:barka_book/features/book_engine/data/models/vocabulary_word.dart';
+import 'package:barka_book/core/widgets/bouncy_button.dart';
 
 class WordSpeechBadge extends StatelessWidget {
   final VocabularyWord word;

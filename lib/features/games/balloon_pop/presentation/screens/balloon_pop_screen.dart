@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../../core/audio/audio_controller.dart';
-import '../../../../core/audio/sound_effects.dart';
-import '../../../../core/theme/app_colors.dart';
-import '../../../../core/widgets/bouncy_button.dart';
-import '../widgets/floating_balloon.dart';
+import 'package:barka_book/core/audio/audio_controller.dart';
+import 'package:barka_book/core/audio/sound_effects.dart';
+import 'package:barka_book/core/theme/app_colors.dart';
+import 'package:barka_book/core/widgets/bouncy_button.dart';
+import 'package:barka_book/features/games/balloon_pop/presentation/widgets/floating_balloon.dart';
 
 class BalloonPopScreen extends StatefulWidget {
   final String targetSound;

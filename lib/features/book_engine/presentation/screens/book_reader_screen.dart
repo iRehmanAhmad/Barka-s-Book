@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import '../../data/models/book_manifest.dart';
-import '../../../../core/audio/audio_controller.dart';
-import '../../../../core/audio/sound_effects.dart';
-import '../../../../core/localization/rtl_helper.dart';
-import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_text_styles.dart';
-import '../../../../core/widgets/bouncy_button.dart';
-import '../widgets/animated_hotspot.dart';
-import '../widgets/word_speech_badge.dart';
-import '../widgets/page_turner.dart';
+import 'package:barka_book/features/book_engine/data/models/book_manifest.dart';
+import 'package:barka_book/core/audio/audio_controller.dart';
+import 'package:barka_book/core/audio/sound_effects.dart';
+import 'package:barka_book/core/localization/rtl_helper.dart';
+import 'package:barka_book/core/theme/app_colors.dart';
+import 'package:barka_book/core/theme/app_text_styles.dart';
+import 'package:barka_book/core/widgets/bouncy_button.dart';
+import 'package:barka_book/features/book_engine/presentation/widgets/animated_hotspot.dart';
+import 'package:barka_book/features/book_engine/presentation/widgets/word_speech_badge.dart';
+import 'package:barka_book/features/book_engine/presentation/widgets/page_turner.dart';
 
 class BookReaderScreen extends StatefulWidget {
   final BookManifest manifest;

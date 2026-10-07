@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../core/widgets/bouncy_button.dart';
-import '../../../../core/theme/app_colors.dart';
+import 'package:barka_book/core/widgets/bouncy_button.dart';
+import 'package:barka_book/core/theme/app_colors.dart';
 
 class PageTurner extends StatelessWidget {
   final int currentPage;

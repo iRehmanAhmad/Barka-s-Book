@@ -5,8 +5,16 @@ using Microsoft Edge Neural TTS (100% Free, zero API key required).
 """
 
 import asyncio
+import io
 import os
 import sys
+
+# Ensure UTF-8 stdout on Windows
+if sys.platform == "win32":
+    try:
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 try:
     import edge_tts

@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import '../../../book_engine/data/models/mini_game_config.dart';
+import 'package:barka_book/features/book_engine/data/models/mini_game_config.dart';
 
 class TracingDetector {
   final List<TracingPoint> checkpoints;

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../book_engine/data/models/mini_game_config.dart';
-import '../../../../core/audio/audio_controller.dart';
-import '../../../../core/audio/sound_effects.dart';
-import '../../../../core/theme/app_colors.dart';
-import '../../../../core/widgets/bouncy_button.dart';
-import '../../domain/tracing_detector.dart';
-import '../widgets/tracing_canvas.dart';
+import 'package:barka_book/features/book_engine/data/models/mini_game_config.dart';
+import 'package:barka_book/core/audio/audio_controller.dart';
+import 'package:barka_book/core/audio/sound_effects.dart';
+import 'package:barka_book/core/theme/app_colors.dart';
+import 'package:barka_book/core/widgets/bouncy_button.dart';
+import 'package:barka_book/features/games/tracing/domain/tracing_detector.dart';
+import 'package:barka_book/features/games/tracing/presentation/widgets/tracing_canvas.dart';
 
 class TracingScreen extends StatefulWidget {
   final MiniGameConfig config;
