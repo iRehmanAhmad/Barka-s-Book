@@ -137,17 +137,17 @@
 - Consumes: `BookManifest`, `AudioController`.
 - Produces: Interactive page viewport with touch-animated illustrations, tap-to-pronounce word badges, and horizontal page navigation.
 
-- [ ] **Step 1: Write widget test for BookReaderScreen**
+- [x] **Step 1: Write widget test for BookReaderScreen**
   Verify page rendering, letter display, and interaction triggers when hotspot is tapped.
-- [ ] **Step 2: Run test to confirm failure**
-- [ ] **Step 3: Implement AnimatedHotspot widget**
+- [x] **Step 2: Run test to confirm failure**
+- [x] **Step 3: Implement AnimatedHotspot widget**
   Provide bounce, squish, and shake animations (`flutter_animate`) coupled with tap audio.
-- [ ] **Step 4: Implement WordSpeechBadge widget**
+- [x] **Step 4: Implement WordSpeechBadge widget**
   Pill badge displaying vocabulary word that speaks pronunciation on tap.
-- [ ] **Step 5: Implement PageTurner with RTL swipe detection**
+- [x] **Step 5: Implement PageTurner with RTL swipe detection**
   Seamless page transitions respecting Urdu Right-to-Left orientation.
-- [ ] **Step 6: Run tests and verify passing**
-- [ ] **Step 7: Commit living book reader engine**
+- [x] **Step 6: Run tests and verify passing**
+- [x] **Step 7: Commit living book reader engine**
   `git commit -m "feat: implement living book reader screen with interactive animated hotspots"`
 
 ---
