@@ -31,15 +31,15 @@
 **Interfaces:**
 - Produces: Base Flutter application with configured dependencies, asset paths, and smoke test.
 
-- [ ] **Step 1: Create pubspec.yaml with required dependencies**
+- [x] **Step 1: Create pubspec.yaml with required dependencies**
   Configure dependencies: `audioplayers: ^6.0.0`, `flutter_animate: ^4.5.0`, `lottie: ^3.1.0`, `hive_flutter: ^1.1.0`, `google_fonts: ^6.2.0`, asset directories (`assets/books/`, `assets/audio/`, `assets/animations/`, `assets/fonts/`).
-- [ ] **Step 2: Create starter starter manifests for English, Urdu, and Maths**
+- [x] **Step 2: Create starter starter manifests for English, Urdu, and Maths**
   Create valid JSON manifests in `assets/books/barka_nursery/` matching the schema defined in `architecture.md`.
-- [ ] **Step 3: Create base lib/main.dart with initialization**
+- [x] **Step 3: Create base lib/main.dart with initialization**
   Initialize Flutter bindings and load theme.
-- [ ] **Step 4: Run flutter/widget smoke test**
+- [x] **Step 4: Run flutter/widget smoke test**
   Verify configuration and test passes.
-- [ ] **Step 5: Commit scaffolding**
+- [x] **Step 5: Commit scaffolding**
   `git commit -m "chore: scaffold Flutter project with dependencies and asset manifests"`
 
 ---
