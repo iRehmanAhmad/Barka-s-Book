@@ -30,16 +30,20 @@ class FlutterAudioPlayerClient implements AudioPlayerClient {
       try {
         await _player.play(AssetSource(cleanPath));
       } catch (e) {
-        // Fallback: if .ogg failed, try .mp3; if .mp3 failed, try .ogg
-        if (cleanPath.endsWith('.ogg')) {
-          final mp3Path = cleanPath.replaceAll(RegExp(r'\.ogg$'), '.mp3');
-          await _player.play(AssetSource(mp3Path));
-        } else if (cleanPath.endsWith('.mp3')) {
-          final oggPath = cleanPath.replaceAll(RegExp(r'\.mp3$'), '.ogg');
-          await _player.play(AssetSource(oggPath));
-        } else {
-          rethrow;
+        // Fallback across .wav, .mp3, and .ogg
+        final basePath = cleanPath.replaceAll(RegExp(r'\.(ogg|mp3|wav)$'), '');
+        final candidates = ['$basePath.wav', '$basePath.mp3', '$basePath.ogg'];
+        bool success = false;
+        for (final candidate in candidates) {
+          if (candidate != cleanPath) {
+            try {
+              await _player.play(AssetSource(candidate));
+              success = true;
+              break;
+            } catch (_) {}
+          }
         }
+        if (!success) rethrow;
       }
     } catch (e) {
       debugPrint('FlutterAudioPlayerClient error playing $assetPath: $e');
