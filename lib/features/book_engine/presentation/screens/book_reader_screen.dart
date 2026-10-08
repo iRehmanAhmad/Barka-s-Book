@@ -138,25 +138,59 @@ class _BookReaderScreenState extends State<BookReaderScreen> {
                       children: [
                         const SizedBox(height: 10),
 
-                        // Big Letter / Number Hero Display
-                        if (currentPage.letter != null)
-                          GestureDetector(
-                            onTap: _playCurrentPagePhonics,
-                            child: Text(
-                              currentPage.letter!,
-                              style: isUrdu
-                                  ? AppTextStyles.urduHeadline
-                                  : AppTextStyles.englishAlphabetHero,
+                        // Big Letter / Number Hero Display with Candy Pill
+                        GestureDetector(
+                          onTap: _playCurrentPagePhonics,
+                          child: Container(
+                            margin: const EdgeInsets.symmetric(vertical: 6),
+                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 6),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(30),
+                              border: Border.all(
+                                color: isUrdu ? const Color(0xFFFF85A1) : const Color(0xFF38B6FF),
+                                width: 3.5,
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: (isUrdu ? const Color(0xFFFF5D8F) : const Color(0xFF38B6FF)).withOpacity(0.25),
+                                  blurRadius: 12,
+                                  offset: const Offset(0, 5),
+                                ),
+                              ],
                             ),
-                          )
-                        else if (currentPage.number != null)
-                          GestureDetector(
-                            onTap: _playCurrentPagePhonics,
-                            child: Text(
-                              '${currentPage.number}',
-                              style: AppTextStyles.mathNumberHero,
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                if (currentPage.letter != null)
+                                  Text(
+                                    currentPage.letter!,
+                                    style: isUrdu
+                                        ? AppTextStyles.urduHeadline
+                                        : AppTextStyles.englishAlphabetHero,
+                                  )
+                                else if (currentPage.number != null)
+                                  Text(
+                                    '${currentPage.number}',
+                                    style: AppTextStyles.mathNumberHero,
+                                  ),
+                                const SizedBox(width: 12),
+                                Container(
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color: isUrdu ? const Color(0xFFFFCCD5) : const Color(0xFFD6F3FF),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Icon(
+                                    Icons.volume_up_rounded,
+                                    color: isUrdu ? const Color(0xFFFF006E) : const Color(0xFF0077B6),
+                                    size: 26,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
+                        ),
 
                         if (currentPage.phonicsDescription != null)
                           Padding(
@@ -165,17 +199,18 @@ class _BookReaderScreenState extends State<BookReaderScreen> {
                               currentPage.phonicsDescription!,
                               style: const TextStyle(
                                 fontSize: 16,
-                                color: Color(0xFF6B7280),
-                                fontWeight: FontWeight.w600,
+                                color: Color(0xFF4B5563),
+                                fontWeight: FontWeight.w700,
                               ),
                             ),
                           ),
 
-                        const SizedBox(height: 16),
+                        const SizedBox(height: 12),
 
                         // Interactive Living Book Hotspot
                         AnimatedHotspot(
                           item: currentPage.mainIllustration,
+                          size: 230,
                           onTap: () {
                             if (currentPage.mainIllustration.interactiveSfx != null) {
                               widget.audioController.playSfx(currentPage.mainIllustration.interactiveSfx!);

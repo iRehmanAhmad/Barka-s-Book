@@ -103,18 +103,34 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // Greeting Pill
+                  // Greeting with Barka's Real Avatar
                   Row(
                     children: [
                       Container(
-                        width: 52,
-                        height: 52,
-                        decoration: const BoxDecoration(
-                          color: AppColors.starGold,
+                        width: 58,
+                        height: 58,
+                        decoration: BoxDecoration(
                           shape: BoxShape.circle,
+                          border: Border.all(color: const Color(0xFFFF5D8F), width: 3),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Color(0x33FF5D8F),
+                              blurRadius: 10,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
                         ),
-                        alignment: Alignment.center,
-                        child: const Text('🌸', style: TextStyle(fontSize: 28)),
+                        child: ClipOval(
+                          child: Image.asset(
+                            'assets/images/barka_avatar.png',
+                            fit: BoxFit.cover,
+                            errorBuilder: (ctx, err, stack) => Container(
+                              color: AppColors.starGold,
+                              alignment: Alignment.center,
+                              child: const Text('👧', style: TextStyle(fontSize: 30)),
+                            ),
+                          ),
+                        ),
                       ),
                       const SizedBox(width: 12),
                       const Column(
@@ -123,14 +139,19 @@ class HomeScreen extends StatelessWidget {
                           Text(
                             'Barka Faral 👧',
                             style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 19,
+                              fontWeight: FontWeight.w900,
                               color: AppColors.deepNavy,
                             ),
                           ),
+                          SizedBox(height: 2),
                           Text(
-                            'Playgroup / Nursery',
-                            style: TextStyle(fontSize: 13, color: Color(0xFF6B7280)),
+                            '🍭 Playgroup Candy Star ⭐',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xFFFF5D8F),
+                            ),
                           ),
                         ],
                       ),
@@ -179,26 +200,92 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
 
-              const SizedBox(height: 24),
+              const SizedBox(height: 16),
 
-              // Title Section
-              const Text(
-                "Barka's Book Shelf 📚",
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.w900,
-                  color: AppColors.deepNavy,
+              // Candy Land Panoramic Banner
+              ClipRRect(
+                borderRadius: BorderRadius.circular(26),
+                child: Container(
+                  height: 125,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(26),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color(0x22000000),
+                        blurRadius: 12,
+                        offset: Offset(0, 6),
+                      ),
+                    ],
+                  ),
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Image.asset(
+                        'assets/images/candy_banner.png',
+                        fit: BoxFit.cover,
+                        errorBuilder: (ctx, err, stack) => Container(
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [Color(0xFFFF9A8B), Color(0xFFFF6A88), Color(0xFFFF99AC)],
+                            ),
+                          ),
+                        ),
+                      ),
+                      // Soft gradient overlay for readable text
+                      Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            colors: [
+                              Colors.black.withOpacity(0.55),
+                              Colors.transparent,
+                            ],
+                          ),
+                        ),
+                      ),
+                      const Positioned(
+                        bottom: 12,
+                        left: 16,
+                        right: 16,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Barka's Book Shelf 📚",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white,
+                                shadows: [
+                                  Shadow(
+                                    color: Colors.black45,
+                                    offset: Offset(0, 2),
+                                    blurRadius: 4,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Text(
+                              "Tap a book to listen, play, and win stickers!",
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              const SizedBox(height: 4),
-              const Text(
-                'Choose a book to read, listen, and play!',
-                style: TextStyle(fontSize: 16, color: Color(0xFF6B7280)),
-              ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 16),
 
-              // Bookshelf Cards
+              // Bookshelf Cards with Real Illustrations
               Expanded(
                 child: ListView(
                   children: [
@@ -207,26 +294,29 @@ class HomeScreen extends StatelessWidget {
                       subtitle: 'Alphabet A-Z, Phonics & Words',
                       heroLetters: 'A B C',
                       icon: Icons.menu_book_rounded,
-                      gradientColors: const [Color(0xFF2196F3), Color(0xFF00BCD4)],
+                      imageAsset: 'assets/images/apple.png',
+                      gradientColors: const [Color(0xFF38B6FF), Color(0xFF7B2CBF)],
                       onTap: () => _openBook(context, bookRepository.loadEnglishNursery),
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 14),
                     SubjectCard(
                       title: 'اردو قاعدہ',
                       subtitle: 'حروفِ تہجی اور بنیادی الفاظ',
                       heroLetters: 'ا ب پ',
                       icon: Icons.auto_stories_rounded,
+                      imageAsset: 'assets/images/anaar.png',
                       isUrdu: true,
-                      gradientColors: const [Color(0xFFFF006E), Color(0xFFFB8500)],
+                      gradientColors: const [Color(0xFFFF006E), Color(0xFFFF8C42)],
                       onTap: () => _openBook(context, bookRepository.loadUrduNursery),
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 14),
                     SubjectCard(
                       title: 'Fun Maths & Numbers',
                       subtitle: 'Counting 1-10, Shapes & Colors',
                       heroLetters: '1 2 3',
                       icon: Icons.calculate_rounded,
-                      gradientColors: const [Color(0xFF55A630), Color(0xFF2A9D8F)],
+                      imageAsset: 'assets/images/sun.png',
+                      gradientColors: const [Color(0xFF06D6A0), Color(0xFF0077B6)],
                       onTap: () => _openBook(context, bookRepository.loadMathsNursery),
                     ),
                   ],

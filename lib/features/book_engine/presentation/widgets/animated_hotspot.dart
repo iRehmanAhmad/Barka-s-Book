@@ -55,6 +55,9 @@ class _AnimatedHotspotState extends State<AnimatedHotspot> with SingleTickerProv
 
   @override
   Widget build(BuildContext context) {
+    final imagePath = widget.item.fallbackImage ?? widget.item.assetPath;
+    final hasImage = imagePath.isNotEmpty && (imagePath.endsWith('.png') || imagePath.endsWith('.jpg'));
+
     return GestureDetector(
       onTap: _triggerAnimation,
       child: AnimatedBuilder(
@@ -68,41 +71,131 @@ class _AnimatedHotspotState extends State<AnimatedHotspot> with SingleTickerProv
                 width: widget.size,
                 height: widget.size,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.9),
                   shape: BoxShape.circle,
+                  gradient: const RadialGradient(
+                    colors: [
+                      Color(0xFFFFFFFF),
+                      Color(0xFFFFF0F5),
+                      Color(0xFFFFE3EC),
+                    ],
+                    stops: [0.6, 0.85, 1.0],
+                  ),
+                  border: Border.all(
+                    color: const Color(0xFFFF85A1),
+                    width: 5,
+                  ),
                   boxShadow: const [
                     BoxShadow(
-                      color: Color(0x1F000000),
-                      blurRadius: 16,
-                      offset: Offset(0, 8),
+                      color: Color(0x38FF5D8F),
+                      blurRadius: 22,
+                      offset: Offset(0, 10),
+                    ),
+                    BoxShadow(
+                      color: Color(0x1A000000),
+                      blurRadius: 8,
+                      offset: Offset(0, 4),
                     ),
                   ],
                 ),
-                alignment: Alignment.center,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.touch_app_rounded,
-                      size: widget.size * 0.45,
-                      color: const Color(0xFFFFB703),
-                    ),
-                    const SizedBox(height: 4),
-                    const Text(
-                      'Tap to Play!',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF023047),
+                child: ClipOval(
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      // Glossy highlight curve
+                      Positioned(
+                        top: 0,
+                        left: 20,
+                        right: 20,
+                        height: widget.size * 0.35,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.white.withOpacity(0.55),
+                                Colors.white.withOpacity(0.0),
+                              ],
+                            ),
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                        ),
                       ),
-                    ),
-                  ],
+
+                      // Real Illustration Image or Fallback
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: hasImage
+                            ? Image.asset(
+                                imagePath,
+                                fit: BoxFit.contain,
+                                errorBuilder: (ctx, err, stack) => _buildFallbackIcon(),
+                              )
+                            : _buildFallbackIcon(),
+                      ),
+
+                      // Sweet "Tap Me! ✨" pill badge at bottom
+                      Positioned(
+                        bottom: 12,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFFFD166),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: Colors.white, width: 2),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0x28000000),
+                                blurRadius: 4,
+                                offset: Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          child: const Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(
+                                'Tap! ✨',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w900,
+                                  color: Color(0xFF1E1B4B),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
           );
         },
       ),
+    );
+  }
+
+  Widget _buildFallbackIcon() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          Icons.touch_app_rounded,
+          size: widget.size * 0.45,
+          color: const Color(0xFFFF5D8F),
+        ),
+        const SizedBox(height: 4),
+        const Text(
+          'Tap to Play!',
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF1E1B4B),
+          ),
+        ),
+      ],
     );
   }
 }
